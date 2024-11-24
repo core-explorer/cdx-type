@@ -1,0 +1,355 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #000;
+    --key-color: blue;
+    --brace-color: green;
+    --link-color: darkblue;
+    --visited-color: purple;
+    --ppkey-color: red;
+    --border-color: lightgray;
+}
+.dark-mode {
+    --bg-color: #1b1b1b;
+    --text-color: #fff;
+    --key-color: indianred;
+    --brace-color: green;
+    --link-color: lightskyblue;
+    --visited-color: mediumorchid;
+    --ppkey-color: yellow;
+    --border-color: gray;
+}
+
+pre {
+    font-family: 'Ubuntu Sans Mono';
+}
+
+code {
+    font-family: 'Ubuntu Sans Mono';
+}
+
+pre code{
+    font-family: 'Ubuntu Sans Mono';
+    font-weight: bold;
+}
+
+h2 {
+    
+    font-weight: 500;
+}
+
+a {
+    color: var(--link-color);
+    /* text-decoration: underline; */
+    
+        text-decoration: none; /* Remove default underline */
+        border-bottom: 1px solid; /* Add custom underline */
+        padding-bottom: 2px; /* Add some space between text and underline */
+    line-height:1.5;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 480px;
+    font-family: sans-serif;
+    /* margin: 100px auto; */
+    padding: 20px;
+  }
+  #drop-area.highlight {
+    border-color: purple;
+  }
+
+  dt {
+    float: left;
+    clear: left;
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+    
+  }
+  dt::after {
+    content: ": ";
+    padding-right: 5px;
+  }
+  
+  .addr {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    
+  }
+
+
+  .offset {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    
+  }
+
+
+  .perm {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    font-weight: bold;
+    
+  }
+  .size {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    
+  }
+
+table {  
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    /* border-color: #D6D6D6; */
+    border-color: var(--border-color);
+    padding-left: 5px;
+    word-wrap: break-all;
+    
+    width: 100%;
+  } 
+  
+th, td {  
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    /* border-color: #D6D6D6; */
+    border-color: var(--border-color);
+    padding-left: 5px;
+    word-wrap: break-all;
+    overflow-wrap: break-word;
+    
+  }  
+
+  td.num {
+    text-align: right;
+    /*font-weight: semi-bold;*/
+  }
+
+  td.addr {
+    text-align: right;
+    
+    
+  }
+
+
+  td.offset {
+    text-align: right;
+    
+  }
+
+
+  td.size {
+    text-align: right;
+    
+    
+  }
+
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.struct {
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+.brace {
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+    color: var(--brace-color);
+}
+
+.typedef {
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+.keyword {
+    color: var(--key-color);
+
+    font-weight: bold;
+    /* font-size: 1.2em; */
+    /*
+    background-color: rgba(0,0,0,0.031);
+  border: 1px solid #D6D6D6;
+  border-radius: 3px;
+  margin: 0 2px;
+  padding: 0 2px;
+  display: inline-block;
+  */
+}
+
+.const_keyword {
+    color: var(--key-color);
+    
+    /* font-size: 1.2em; */
+    /*
+    background-color: rgba(0,0,0,0.031);
+  border: 1px solid #D6D6D6;
+  border-radius: 3px;
+  margin: 0 2px;
+  padding: 0 2px;
+  display: inline-block;
+  */
+}
+
+.ppkeyword {
+    color: var(--ppkey-color);
+    font-family: 'Ubuntu Sans Mono', monospace;
+    font-weight: bold;
+    /* font-size: 1.2em; */
+}
+
+
+.address-code {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    /* font-size: 0.8em; */
+}
+
+.address-data {
+    font-family: 'Ubuntu Sans Mono', monospace;
+    /* font-size: 1em; */
+}
+
+.desc {
+    font-family: "Ubuntu Sans", sans-serif;
+    text-align: center;
+}
+
+.string {
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+    color:darkred;
+}
+
+.cleft {
+    text-align: left;
+}
+
+.cright {
+    text-align: right;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
+}
+
+.elfsegments {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+
+.elfsections {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+
+.segment {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+.null {
+    color:gray;
+}
+
+.perm {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono', monospace;
+}
+
+
+.memory {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+}
+
+
+.perm[perm="r-x"] {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    color:green;
+    }
+
+
+.perm[perm="rw-"] {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    color:blue;
+   }
+
+.symbol {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    /* font-size: 0.8em; */
+}
+
+.symbol-suffix {
+    /* font-size: 0.8em; */
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.perm[perm="r--"] {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    color:purple;
+    }
+
+
+span[perm="rwx"] {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    color:red;
+}
+
+div.alloc:nth-child(even) {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+    background-color: lightblue;
+}
+
+div.alloc:nth-child(odd) {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+    background-color: aquamarine;
+}
+
+
+div[class="alloc_freed"] {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-family: 'Ubuntu Sans Mono','Courier New', monospace;
+    background-color:lightgray;
+}
+
+td[class="chunk_header"] {
+    background-color:var(--bg-color);
+}
+
+button {
+    margin: 1em;
+}
